@@ -73,7 +73,7 @@ TCRL_bin <-function(Y,X,fR,W,S){
     ## fisher combination
     pval.overall  <- fisher(c(pval_fix,pval_rand))
 
-    return(c(fixed.effect=pval_fix,rand.effect=pval_rand,Overall.pval=pval_pval.overall))
+    return(c(fixed.effect=pval_fix,rand.effect=pval_rand,Overall.pval=pval.overall))
 
 }
 

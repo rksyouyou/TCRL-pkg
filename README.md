@@ -4,6 +4,10 @@
 
 ## Overview
 
+T cell receptors (TCRs) are essential for adaptive immunity, and advances in genome technology now enable analysis of the TCR repertoire at the individual sequence level. Studying TCR repertoire associations with clinical phenotypes can provide insights into immune-mediated diseases, yet methods for such analyses remain underdeveloped. We introduce **TCR-L**, a statistical tool for evaluating associations between the TCR repertoire and disease outcomes. Built on a mixed-effect model, **TCR-L** accounts for both **fixed effects**, representing explicitly extracted TCR sequence features, and **random effects**, capturing hidden sequence characteristics. Independent statistical tests assess these effects separately before combining their results.
+
+Simulation studies confirm that **TCR-L** effectively controls type I error and outperforms methods considering only fixed or random effects ([https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-022-04690-2](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-022-04690-2)). Application to real-world data from a skin cutaneous melanoma study reveals a significant association between TCR repertoire and patient survival. By incorporating both observable and latent TCR features, **TCR-L** offers a robust approach for investigating TCR repertoire associations with disease outcomes.
+
 The **tcrl** package provides a suite of functions for analyzing associations between the T-cell receptor (TCR) repertoire and clinical phenotypes. It is designed to help researchers evaluate the diversity and composition of the TCR repertoire and its relationship to clinical outcomes, such as disease states or treatment responses. The package includes methods for both continuous and binary phenotypes, incorporating homology matrices to account for correlations between subjects' TCR repertoires.
 
 ### Features:

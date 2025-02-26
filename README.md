@@ -61,11 +61,22 @@ This dataset is intended to facilitate the evaluation of associations between TC
 # Compute amino acid frequency
 freq_matrix <- AAfreq(TCRdat[,1], TCRdat[,2], as.numeric(TCRdat[,3]))
 
-# View the result
-print(freq_matrix)
-
 detach(example.data)
+
+# View the result
+head(freq_matrix[,1:3])
+            [,1]        [,2]       [,3]
+ [1,] 0.11646586 0.080321285 0.01606426
+ [2,] 0.08227848 0.008438819 0.05485232
+ [3,] 0.07883817 0.029045643 0.01244813
+ [4,] 0.10243902 0.039024390 0.04390244
+ [5,] 0.09810127 0.069620253 0.03164557
+ [6,] 0.09523810 0.000000000 0.04761905
 ```
+The `AAfreq` function computes amino acid frequencies within the TCR repertoire across multiple subjects. This function is essential for understanding the distribution and abundance of amino acids, which plays a crucial role in evaluating immune diversity and response. By inputting subject-specific TCR sequence data, users can generate a frequency matrix for further analysis, making it particularly useful in immunology and bioinformatics studies that aim to characterize TCR diversity and its associations with clinical phenotypes.
+
+The function returns a **numeric matrix**, where each **row** represents a subject, each **column** corresponds to an amino acid. The values indicate the frequency of each amino acid in the subject’s TCR repertoire. This output matrix can be used for further analyses, including evaluating amino acid diversity patterns across a study cohort or investigating potential links between TCR repertoire composition and clinical outcomes.
+
 
 ### Example 2: TCR Repertoire Homology Calculation
 

@@ -117,6 +117,9 @@ S <- seqhom(TCRdat[,1], TCRdat[,2], as.numeric(TCRdat[,3]), 'BLOSUM62')
 # Perform score test for continuous outcome
 TCRL_cont(Y, X, fR, W, S)
 
+fixed.effect  rand.effect Overall.pval
+   0.3738187    0.2862339    0.3461362
+
 detach(example.data)
 ```
 

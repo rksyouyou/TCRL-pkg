@@ -123,6 +123,8 @@ fixed.effect  rand.effect Overall.pval
 detach(example.data)
 ```
 
+The **TCRL_cont** function evaluates the association between T-cell receptor (TCR) repertoire features and a **continuous clinical phenotype**, incorporating both **fixed and random effects** to account for variability across subjects. In this analysis, the **fixed effect p-value** (0.3738) suggests that TCR features do not have a consistent association with the phenotype across all subjects. Similarly, the **random effect p-value** (0.2862) indicates that allowing the effect to vary between individuals does not reveal a statistically significant relationship. The **overall p-value** (0.3461), obtained by combining the fixed and random effects using **Fisher’s procedure**, further supports this conclusion, as it is well above the standard significance threshold of 0.05. These results suggest that, in this example dataset, there is no strong evidence of an association between TCR repertoire features and the continuous clinical phenotype. 
+
 ## Citation
 
 If you use the **tcrl** package in your research, please cite:

@@ -89,10 +89,17 @@ attach(example.data)
 S <- seqhom(TCRdat[,1], TCRdat[,2], as.numeric(TCRdat[,3]), "BLOSUM62")
 
 # View the homology matrix
-print(S)
+print(S[1:3,1:3])                                                                                                                                                                         
+           [,1]      [,2]      [,3]
+ [1,] 1.0000000 0.2360752 0.2830869
+ [2,] 0.2360752 1.0000000 0.3423294
+ [3,] 0.2830869 0.3423294 1.0000000
 
 detach(example.data)
 ```
+
+The `seqhom` function quantifies the homology between TCR repertoires across different subjects based on amino acid sequence similarities. It utilizes substitution matrices, such as BLOSUM and PAM, to evaluate sequence similarity, providing a numerical measure of TCR repertoire homology. The function returns a symmetric homology matrix (S), where each entry S[i,j] represents the computed homology score between subjects i and j. Higher values indicate greater similarity between TCR repertoires. This method provides a powerful framework for analyzing immune repertoire similarities and investigating shared immune responses across individuals.
+
 
 ### Example 3: Score Test for Continuous Outcomes
 
